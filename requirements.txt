@@ -3,4 +3,4 @@ timm
 pillow
 uvicorn
 python-multipart
-skicit-learn
+scikit-learn
