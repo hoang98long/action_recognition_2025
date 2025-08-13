@@ -28,7 +28,7 @@ app = FastAPI(title="Human Action Recognition API",
               version="1.0",
               root_path="/ges")
 
-@app.post("/predict_action")
+@app.post("/")
 async def predict_action(file: UploadFile = File(...)):
     image_bytes = await file.read()
     image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
