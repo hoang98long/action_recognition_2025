@@ -25,7 +25,8 @@ transform = transforms.Compose([
 
 app = FastAPI(title="Human Action Recognition API",
               description="Dự đoán hành động từ ảnh với EfficientNet-B5",
-              version="1.0")
+              version="1.0",
+              root_path="/ges")
 
 @app.post("/predict_action")
 async def predict_action(file: UploadFile = File(...)):
